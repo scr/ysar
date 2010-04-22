@@ -12,7 +12,7 @@
         <key id="host" type="xs:string" paramType="path" required="true"/>
       </inputs>
       <execute><![CDATA[
-      var fetch = y.query('select * from html where url="@url" and xpath="//pre"', {url : request});
+      var fetch = y.query('select * from html where url=@url and xpath="//pre"', {url : request});
       response.object = <ysar><line>{fetch}</line></ysar>;
       ]]></execute>
     </select>
