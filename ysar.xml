@@ -1,0 +1,21 @@
+<table xmlns="http://query.yahooapis.com/v1/schema/table.xsd">
+  <meta>
+    <author>Sheridan C. Rawlins</author>
+    <sampleQuery>select * from {table} where host="www.yahoo.com"</sampleQuery>
+  </meta>
+  <bindings>
+    <select itemPath="ysar.line" produces="XML">
+      <urls>
+        <url>http://{host}/ysar</url>
+      </urls>
+      <inputs>
+        <key id="host" type="xs:string" paramType="path" required="true"/>
+      </inputs>
+      <execute>
+      </execute><![CDATA[
+      var fetch = request.get().response;
+      response.object = <ysar><line>{fetch}</line></ysar>;
+      ]]>
+    </select>
+  </bindings>
+</table>
