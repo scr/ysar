@@ -11,11 +11,10 @@
       <inputs>
         <key id="host" type="xs:string" paramType="path" required="true"/>
       </inputs>
-      <execute>
-      </execute><![CDATA[
+      <execute><![CDATA[
       var fetch = request.get().response;
       response.object = <ysar><line>{fetch}</line></ysar>;
-      ]]>
+      ]]></execute>
     </select>
   </bindings>
 </table>
