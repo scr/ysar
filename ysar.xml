@@ -13,7 +13,7 @@
       </inputs>
       <execute><![CDATA[
       var fetch = request.get().response;
-      response.object = <ysar><line>{fetch.body}</line></ysar>;
+      response.object = <ysar><line>{fetch}</line></ysar>;
       ]]></execute>
     </select>
   </bindings>
