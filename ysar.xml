@@ -13,7 +13,7 @@
       </inputs>
       <execute><![CDATA[
       var fetch = y.query('select * from html where url=@url and xpath="//pre"', {url : request.url});
-      response.object = <ysar><line><url>{request.url}</url><![CDATA[]]>{fetch.results.pre}<![CDATA[]]]]><![CDATA[></line></ysar>;
+      response.object = <ysar><line><url>{request.url}{fetch.results.pre}</line></ysar>;
       ]]></execute>
     </select>
   </bindings>
