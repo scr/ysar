@@ -12,11 +12,15 @@
         <key id="host" type="xs:string" paramType="path" required="true"/>
       </inputs>
       <execute><![CDATA[
-      var fetch = y.query('select * from html where url=@url and xpath="//pre"', {url : request.url});
+      var fetch = y.query('select * from html where url=@url and xpath="//pre"', {url : request.url + "?header=0"});
 
       var ysar = fetch.results.pre;
       var ysarXML = <></>;
       for each (var line in ysar.split("\n")) {
+        var vals = <></>;
+        for each (var val in line.split(" ", line.replace(/\s+/g," "))) {
+          vals += <val>{val}</val>;
+        }
         ysarXML += <line>{line}</line>;
       }
 
