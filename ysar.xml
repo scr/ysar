@@ -37,7 +37,7 @@
                 headers[headerIndex++].push(val);
               }
             } else {
-              vals += <val id={headers[headerIndex++].join()}>{val}</val>;
+              vals += <val id={headers[headerIndex++].join(" ")}>{val}</val>;
               havevals = true;
             }
           } else if ( isHeader ) {
