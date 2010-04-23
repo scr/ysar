@@ -24,7 +24,7 @@
         ysarXML += <line>{vals}</line>;
       }
 
-      response.object = <ysar><line><url>{request.url}</url>{ysarXML}</line></ysar>;
+      response.object = <ysar><url>{request.url}</url>{ysarXML}</ysar>;
       ]]></execute>
     </select>
   </bindings>
