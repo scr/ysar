@@ -37,6 +37,8 @@
               vals += <val id={headers[headerIndex++]}>{val}</val>;
               havevals = true;
             }
+          } else if ( isHeader ) {
+            ++headerIndex;
           }
         }
         if ( foundHeader ) {
