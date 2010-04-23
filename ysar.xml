@@ -14,13 +14,9 @@
       <execute><![CDATA[
       var fetch = y.query('select * from html where url=@url and xpath="//pre"', {url : request.url + "?header=0"});
 
-      var ysar = fetch.results.pre.text;
+      var ysar = fetch.results.pre;
       var ysarXML = <></>;
       for each (var line in ysar.split("\n")) {
-        var vals = <></>;
-        for each (var val in line.split(" ")) {
-          vals += <val>{val}</val>;
-        }
         ysarXML += <line>{line}</line>;
       }
 
