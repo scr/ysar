@@ -31,10 +31,10 @@
             if ( isHeader ) {
               foundHeader = true;
               if ( headerLines < 2 ) {
-                headers[headerIndex++] += val;
+                push(headers[headerIndex++],val);
               }
             } else {
-              vals += <val id={headers[headerIndex++]}>{val}</val>;
+              vals += <val id={headers[headerIndex++].join()}>{val}</val>;
               havevals = true;
             }
           } else if ( isHeader ) {
