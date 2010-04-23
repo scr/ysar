@@ -31,7 +31,7 @@
             if ( isHeader ) {
               foundHeader = true;
               if ( headerLines < 2 ) {
-                header[headerIndex++] += val;
+                headers[headerIndex++] += val;
               }
             } else {
               vals += <val>{val}</val>;
