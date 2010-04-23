@@ -6,7 +6,7 @@
   <bindings>
     <select itemPath="ysar.line" produces="XML">
       <urls>
-        <url>http://{host}/ysar?header=0</url>
+        <url>http://{host}/ysar</url>
       </urls>
       <inputs>
         <key id="host" type="xs:string" paramType="path" required="true"/>
