@@ -32,7 +32,7 @@
               foundHeader = true;
               if ( headerLines < 2 ) {
                 if ( ! headers[headerIndex++] ) {
-                  headers[headerIndex++] = [];
+                  headers[headerIndex] = [];
                 }
                 headers[headerIndex++].push(val);
               }
