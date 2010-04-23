@@ -31,6 +31,9 @@
             if ( isHeader ) {
               foundHeader = true;
               if ( headerLines < 2 ) {
+                if ( !headers[headerIndex++].defined() ) {
+                  headers[headerIndex++] = [];
+                }
                 headers[headerIndex++].push(val);
               }
             } else {
