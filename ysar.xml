@@ -21,7 +21,7 @@
         for each (var val in line.replace(/\s+/g," ").split(" ")) {
           vals += <val>{val}</val>;
         }
-        if ( vals.length() > 0 ) {
+        if ( vals.size() > 0 ) {
           ysarXML += <line>{vals}</line>;
         }
       }
