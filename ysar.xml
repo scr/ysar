@@ -31,7 +31,7 @@
             if ( isHeader ) {
               foundHeader = true;
               if ( headerLines < 2 ) {
-                push(headers[headerIndex++],val);
+                headers[headerIndex++].push(val);
               }
             } else {
               vals += <val id={headers[headerIndex++].join()}>{val}</val>;
