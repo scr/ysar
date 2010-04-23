@@ -16,6 +16,8 @@
 
       var ysar = fetch.results.pre;
       var ysarXML = <></>;
+      ysar = ysar.replace("^\n","");
+      ysar = ysar.replace("\n$","");
       for each (var line in ysar.split("\n")) {
         var vals = <></>;
         for each (var val in line.replace(/\s+/g," ").split(" ")) {
