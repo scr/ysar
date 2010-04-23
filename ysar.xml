@@ -10,7 +10,6 @@
       </urls>
       <inputs>
         <key id="host" type="xs:string" paramType="path" required="true"/>
-        <key id="interval" type="xs:number" paramType="query"/>
       </inputs>
       <execute><![CDATA[
       var fetch = y.query('select * from html where url=@url and xpath="//pre"', {url : request.url});
