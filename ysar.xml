@@ -34,7 +34,7 @@
                 headers[headerIndex++] += val;
               }
             } else {
-              vals += <val>{val}</val>;
+              vals += <val id="{headers[headerIndex++]}">{val}</val>;
               havevals = true;
             }
           }
