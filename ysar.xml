@@ -20,7 +20,7 @@
         var vals = <></>;
         var havevals = false;
         for each (var val in line.replace(/\s+/g," ").split(" ")) {
-          if ( vals.match(/\S/)) {
+          if ( val.match(/\S/) ) {
             vals += <val>{val}</val>;
             havevals = true;
           }
