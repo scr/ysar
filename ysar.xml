@@ -17,17 +17,34 @@
 
       var ysar = fetch.results.pre;
       var ysarXML = <></>;
+      var headerLines = 0;
+      var headers = [];
       for each (var line in ysar.split("\n")) {
+        var isHeader = !line.match(/^\d/);
+        var foundHeader = false;
+
         var vals = <></>;
         var havevals = false;
+        var headerIndex = 0;
         for each (var val in line.replace(/\s+/g," ").split(" ")) {
           if ( val.match(/\S/) ) {
-            vals += <val>{val}</val>;
-            havevals = true;
+            if ( isHeader ) {
+              foundHeader = true;
+              if ( headerLines < 2 ) {
+                header[headerIndex++] += val;
+              }
+            } else {
+              vals += <val>{val}</val>;
+              havevals = true;
+            }
           }
         }
-        if ( havevals ) {
-          ysarXML += <line>{vals}</line>;
+        if ( foundHeader ) {
+          ++headerLines;
+        } else {
+          if ( havevals ) {
+            ysarXML += <line>{vals}</line>;
+          }
         }
       }
 
